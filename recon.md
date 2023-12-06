@@ -44,3 +44,16 @@
 
 - cherrytree is good free program to take notes
 - note node hierarchy domain > subdomain > software > recon
+
+# dig
+
+- used for querying DNS (Domain Name System) information. If dig finds something it's usually an informational finding.
+- use if port 5
+  ```
+  dig axfr @<ip> <url>
+  ```
+- **`axfr`:** Query type for DNS zone transfer.
+- **`@<ip>`:** Replace `<ip>` with DNS server's IP for zone transfer. To find ip in kali run `cat /etc/resolv.conf`
+- **`<url>`:** Replace `<url>` with the domain name to retrieve DNS zone data.
+
+This command is used to perform DNS zone transfers, copying entire DNS zones from one server to another.
